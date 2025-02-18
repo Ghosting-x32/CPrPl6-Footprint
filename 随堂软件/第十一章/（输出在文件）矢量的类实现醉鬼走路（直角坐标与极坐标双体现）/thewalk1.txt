@@ -1,0 +1,9 @@
+Enter target distance (q to quit): 
+Enter step length: 
+After 528 steps, the subject has the following location:
+(x,y) = (29.4155, -41.0148)
+ or
+(m,a) = (50.4726, -54.3522)
+Average outward distance per step = 0.0955921
+Enter target distance (q to quit): 
+Bye!
