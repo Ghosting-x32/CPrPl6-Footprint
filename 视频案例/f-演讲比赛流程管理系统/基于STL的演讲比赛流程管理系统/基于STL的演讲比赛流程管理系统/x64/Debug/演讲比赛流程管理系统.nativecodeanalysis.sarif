@@ -1,0 +1,59 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32217.1",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///e:/vs/视频案例/f-演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/演讲比赛流程管理系统.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "170a7de8ccdf89e8efe5bd509cef01ff1552e7e34e579ecd6548c557404ea970"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/vs/视频案例/f-演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/speechmanager.h"
+          },
+          "hashes": {
+            "sha-256": "b641b8c0c5c770aa98d5befd4031275bc7e38f5bb7025d8a4acf92281a9c5894"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/vs/视频案例/f-演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/speaker.h"
+          },
+          "hashes": {
+            "sha-256": "53c39dbb5194368a7cdc1d85f3c3ea1e1d18b00efc92f314471af826dfc930b1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///e:/vs/视频案例/f-演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/基于stl的演讲比赛流程管理系统/printint.h"
+          },
+          "hashes": {
+            "sha-256": "fa23015b9100ea089d7082a3cab11ecba7a565b2ca55a132ca35db2238845e0c"
+          }
+        }
+      ]
+    }
+  ]
+}

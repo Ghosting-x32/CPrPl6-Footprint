@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>E:\VS\视频案例\f-演讲比赛流程管理系统\基于STL的演讲比赛流程管理系统\基于STL的演讲比赛流程管理系统\</FILEPATH>
+      <FILENAME>Speaker.h</FILENAME>
+      <LINE>13</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>未初始化变量 Speaker::m_Score。始终初始化成员变量(type.6)。</DESCRIPTION>
+    <FUNCTION>Speaker::{ctor}</FUNCTION>
+    <DECORATED>??0Speaker@@QEAA@XZ</DECORATED>
+    <FUNCLINE>13</FUNCLINE>
+    <ADDITIONALINFO>
+      <targetSymbol>Speaker::m_Score</targetSymbol>
+    </ADDITIONALINFO>
+    <PATH></PATH>
+  </DEFECT><DEFECT>
+    <SFA>
+      <FILEPATH>E:\VS\视频案例\f-演讲比赛流程管理系统\基于STL的演讲比赛流程管理系统\基于STL的演讲比赛流程管理系统\</FILEPATH>
+      <FILENAME>SpeechManager.cpp</FILENAME>
+      <LINE>292</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>26451</DEFECTCODE>
+    <DESCRIPTION>算术溢出: 使用 4 字节值上的运算符 - ，然后将结果转换到 8 字节值。在调用运算符 - 之前将值强制转换为宽类型可避免溢出(io.2)。</DESCRIPTION>
+    <FUNCTION>SpeechManager::loadRecord</FUNCTION>
+    <DECORATED>?loadRecord@SpeechManager@@QEAAXXZ</DECORATED>
+    <FUNCLINE>250</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>
