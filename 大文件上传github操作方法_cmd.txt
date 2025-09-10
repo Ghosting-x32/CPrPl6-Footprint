@@ -1,0 +1,25 @@
+//1.去到E盘
+E:
+//2.去到大文件仓库
+cd cd \文档\练习测试仓库
+//3.把当前文件夹设置为本地仓库
+git init
+//4.设置LFS规则（跟踪所有.mp4文件）
+git lfs install
+git lfs track "*.mp4"
+//5.告诉本地仓库，它的远程仓库在哪（建立连接）
+git remote add origin https://github.com/Ghosting-x32/CPrPl6-Footprint
+//6.添加所有文件到暂存区（包括.gitattributes和.mp4文件）
+git add .
+//7.设置库的修改者
+git config --global user.email "1778942768@qq.com"
+git config --global user.name "Ghosting-x32"
+//8.提交到本地仓库
+git commit -m "第一次提交：添加项目和LFS设置"
+//9.推送到远程仓库（GitHub）
+	(1)默认推送方式
+	git push -u origin master
+	(2)丢弃远程更改推送方式----个人项目推荐
+	git push --force origin master
+	(3)保留远程的更改但丢弃本地不兼容的提交
+	git push --force-with-lease origin master
