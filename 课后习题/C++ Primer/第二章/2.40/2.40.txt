@@ -1,0 +1,12 @@
+原书中的程序包含3 个数据成员，分别是bookNo（书籍编号）、units_sold
+（销售量）、revenue（销售收入），新设计的Sales_data 类细化了销售收入的计
+算方式，在保留bookNo 和units_sold 的基础上，新增了sellingprice（零
+售价、原价）、saleprice（ 实售价、折扣价）、discount（ 折扣）， 其中
+discount=saleprice/sellingprice。
+struct Sales_data {
+std::string bookNo; // 书籍编号
+unsigned units_sold = 0; // 销售量
+double sellingprice = 0.0; // 零售价
+double saleprice = 0.0; // 实售价
+double discount = 0.0 // 折扣
+};

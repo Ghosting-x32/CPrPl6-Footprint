@@ -1,0 +1,10 @@
+本题的所有语句应该被看作是顺序执行的，即形如：
+const int buf;
+int cnt = 0;
+const int sz = cnt;
+++cnt;
+++sz;
+(a)是非法的，const 对象一旦创建后其值就不能改变，所以const 对象必须初
+始化。该句应修改为const int buf = 10。
+(b)和(c)是合法的。
+(d)是非法的，sz 是一个const 对象，其值不能被改变，当然不能执行自增操作。
