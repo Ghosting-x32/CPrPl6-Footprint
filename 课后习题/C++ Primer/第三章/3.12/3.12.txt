@@ -1,0 +1,6 @@
+(a)是正确的，定义了一个名为ivec 的vector 对象，其中的每个元素都是
+vector<int>对象。
+(b)是错误的，svec 的元素类型是string，而ivec 的元素类型是int，因此
+不能使用ivec 初始化svec。
+(c)是正确的，定义了一个名为svec 的vector 对象，其中含有10 个元素，每
+个元素都是字符串null。
