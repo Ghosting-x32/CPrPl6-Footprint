@@ -1,0 +1,6 @@
+(a)字符'a'提升为int，与3 相加所得的结果再转换为char 并赋给cval。
+(b)ival 转换为double，与1.0 相乘的结果也是double 类型，ui 转换为
+double 类型后与乘法得到的结果相减，最终的结果转换为float 并赋给fval。
+(c)ui 转换为float，与fval 相乘的结果转换为double 类型并赋给dval。
+(d)ival 转换为float，与fval 相加所得的结果转换为double 类型，再与
+dval 相加后结果转换为char 类型。

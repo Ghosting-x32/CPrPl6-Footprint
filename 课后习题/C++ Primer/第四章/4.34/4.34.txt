@@ -1,0 +1,5 @@
+(a)if 语句的条件应该是布尔值，因此float 型变量fval 自动转换成布尔值，
+转换规则是所有非0 值转换为true，0 转换为false。
+(b)ival 转换成float，与fval 求和后所得的结果进一步转换为double 类型。
+(c)cval 执行整型提升转换为int，与ival 相乘后所得的结果转换为double
+类型，最后再与dval 相加。
