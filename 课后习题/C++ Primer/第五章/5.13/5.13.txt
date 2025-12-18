@@ -1,0 +1,70 @@
+(a)的错误是在每个case 分支中都缺少了break;语句，造成的后果是一旦执行
+了前面的case 分支，必定还会继续执行接下来的其他case 分支。举例说明，如果
+ch 的内容是字符'a'，则aCnt、eCnt 和iouCnt 的值都会增加；如果ch 的内容是
+字符'e'，则eCnt 和iouCnt 的值都会增加，这显然与程序的预期是不相符的。
+修改后的程序如下所示：
+unsigned aCnt = 0, eCnt = 0, iouCnt = 0;
+char ch = next_text();
+switch (ch) {
+case ’a’:
+aCnt++;
+break;
+case ’e’:
+eCnt++;
+break;
+default:
+iouCnt++;
+break;
+}
+(b)的错误是在case 分支中定义并初始化了变量ix，同时在default 分支中
+使用了该变量，此时如果控制流跳过case 分支而直接到达default 分支，则会试
+图使用未经初始化的变量，因而该程序无法通过编译。解决办法是，把ix 的定义放
+置在switch 语句之前。
+修改后的程序如下所示：
+unsigned index = some_value();
+int ix;
+switch (index) {
+case 1:
+ix = get_value();
+ivec[ ix ] = index;
+break;
+default:
+ix = ivec.size()-1;
+ivec[ ix ] = index;
+}
+(c)的错误是在同一个case 标签中放置了多个值，而C++规定一个case 标签
+只能对应一个值。修改后的程序如下所示：
+unsigned evenCnt = 0, oddCnt = 0;
+int digit = get_num() % 10;
+switch (digit) {
+case 1:
+case 3:
+case 5:
+case 7:
+case 9:
+oddcnt++;
+break;
+case 2:
+case 4:
+case 6:
+case 8:
+case 10:
+evencnt++;
+break;
+}
+(d)的错误是使用变量作为case 标签的内容，C++规定，case 标签的内容只能
+是整型常量表达式。修改后的程序如下所示：
+const unsigned ival=512, jval=1024, kval=4096;
+unsigned bufsize;
+unsigned swt = get_bufCnt();
+switch(swt) {
+case ival:
+bufsize = ival * sizeof(int);
+break;
+case jval:
+bufsize = jval * sizeof(int);
+break;
+case kval:
+bufsize = kval * sizeof(int);
+break;
+}

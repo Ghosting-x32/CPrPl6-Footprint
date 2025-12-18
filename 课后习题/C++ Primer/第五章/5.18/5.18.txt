@@ -1,0 +1,22 @@
+(a)的含义是每次循环读入两个整数并输出它们的和。因为do-while 语句的循
+环体必须是一条语句或者一个语句块，所以在本题中应该把循环体的内容用花括号
+括起来。修改后的程序是：
+do{
+int v1, v2;
+cout << "Please enter two numbers to sum:" ;
+if (cin >> v1 >> v2)
+cout << "Sum is: " << v1 + v2 << endl;
+}while (cin);
+(b)的含义是当get_response 的返回值不为0 时执行循环体。因为do-while
+语句不允许在循环条件内定义变量，所以该程序是错误的。修改后的程序是：
+int ival;
+do {
+ival = get_response();
+} while (ival);
+(c) 的含义是当get_response 的返回值不为0 时执行循环体。因为出现在
+do-while 语句条件部分的变量必须定义在循环体之外，所以该程序是错误的。修
+改后的程序是：
+int ival;
+do {
+ival = get_response();
+} while (ival);

@@ -1,0 +1,5 @@
+用 do-while 语句改写后的程序如下所示：
+int sz;
+do{
+sz = get_size();
+}while(sz <= 0);

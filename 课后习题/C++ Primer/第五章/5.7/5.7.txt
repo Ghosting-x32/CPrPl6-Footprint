@@ -1,0 +1,23 @@
+(a) if 语句的循环体应该是一条语句，需要以分号结束，程序修改为：
+if (ival1 != ival2)
+ival1 = ival2;
+else ival1 = ival2 = 0;
+(b) if 语句的循环体只能是一条语句，本题从逻辑上来说需要做两件事，一是修
+改minval 的值，二是重置occurs 的值，所以必须把这两条语句放在一个块里。
+程序修改为：
+if (ival < minval)
+{
+minval = ival;
+occurs = 1;
+}
+(c) ival 是定义在if 语句中的变量，其作用域仅限于第一个if 语句，要想在
+第二个if 语句中也使用它，就必须把它定义在两个if 语句的外部。程序修改为：
+int ival;
+if (ival = get_value())
+cout << "ival = " << ival << endl;
+if (!ival)
+cout << "ival = 0\n";
+(d) 程序的原意是判断ival 的值是否是0，原题使用赋值运算符的结果是把0
+赋给了ival，然后检验ival 的值，这样使得条件永远不会满足。程序修改为：
+if (ival == 0)
+ival = get_value();
