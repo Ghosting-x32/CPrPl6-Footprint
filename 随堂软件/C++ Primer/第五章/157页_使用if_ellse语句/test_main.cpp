@@ -1,0 +1,65 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<iterator>
+#include<cstddef>
+
+ 
+
+
+
+using std::cin;
+using std::cout;
+using std::endl;
+using std::vector;
+using std::string;
+using std::begin;
+using std::end;
+using std::size_t;
+
+
+
+
+int main()
+{
+	const vector<string> scores = { "F", "D", "C", "B", "A", "A++" };
+
+	string lettergrade;
+	int grade = 0;
+	cout << "请输入你的分数（0-100）:" << endl;
+	cin >> grade;
+	if (grade < 60 && grade >= 0)
+	{
+		lettergrade = scores[0];
+	}
+	else
+	{
+		if (grade >= 60 && grade <= 100)
+		{
+			lettergrade = scores[(grade - 50) / 10];
+			if (grade != 100)
+			{
+				if (grade % 10 > 7)
+				{
+					lettergrade += "+";
+				}
+				else if (grade % 10 < 3)
+				{
+					lettergrade += "-";
+				}
+
+			}			
+
+		}
+		else
+		{
+			cout << "你输入的分数不在0-100范围内！" << endl;//grade > 100或者grade < 0时循环走这个分支
+		}
+	}
+
+	cout << lettergrade << endl;
+
+
+	system("pause");
+	return 0;
+}
