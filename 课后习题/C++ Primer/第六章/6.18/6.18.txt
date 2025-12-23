@@ -1,0 +1,8 @@
+(a)bool compare(matrix& ma1, matrix& ma2);
+(b)vector<int>::iterator change_val(int a, vector<int>::iterator it);
+
+
+(a)的函数声明是：
+bool compare( const matrix&, const matrix& )
+(b)的函数声明是：
+vector<int>::iterator change_val( int, vector<int>::iterator )
