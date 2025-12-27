@@ -1,0 +1,10 @@
+std::istream& Sales_data(std::istream& is = std::cin)
+{
+
+	read(is, *this);
+
+}
+
+
+此时该函数具有了默认构造函数的作用，因此我们原来声明的默认构造函数
+Sales_data()= default;应该去掉，否则会引起调用的二义性。

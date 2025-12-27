@@ -1,0 +1,43 @@
+首先选择(a) Book，一本书通常包含书名、ISBN 编号、定价、作者、出版社等
+信息，因此令其数据成员为：Name、ISBN、Price、Author、Publisher，其中
+Price 是double 类型，其他都是string 类型。Book 的构造函数有三个：一个
+默认构造函数、一个包含完整书籍信息的构造函数和一个接受用户输入的构造函数。
+其定义如下：
+class Book
+{
+private:
+string Name, ISBN, Author, Publisher;
+double Price = 0;
+public:
+Book() = default;
+Book(const string &n, const string &I, double pr, const string &a,
+const string &p)
+{
+Name = n;
+ISBN = I;
+Price = pr;
+Author = a;
+Publisher = p;
+}
+Book(std::istream &is) { is >> *this; }
+};
+
+
+
+
+也可以选择(f) Tree，一棵树通常包含树的名称、存活年份、树高等信息，因
+此令其数据成员为：Name、Age、Height，其中Name 是string 类型，Age 是
+unsigned 类型，Height 是double 类型。假如我们不希望由用户输入Tree 的信
+息，则可以去掉接受std::istream&形参的构造函数，只保留默认构造函数和接
+受全部信息的构造函数。其定义如下：
+class Tree
+{
+private:
+string Name;
+unsigned Age = 0;
+double Height = 0;
+public:
+Tree() = default;
+Tree(const string &n, unsigned a, double h) : Name(n), Age(a),
+Height(h) {}
+}

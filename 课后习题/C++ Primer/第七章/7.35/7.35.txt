@@ -1,0 +1,29 @@
+代码的含义及Type 和initVal 的使用请参考注释。
+typedef string Type; // 声明类型别名Type 表示string
+Type initVal(); // 声明函数initVal，返回类型是Type
+class Exercise { // 定义一个新类Exercise
+public:
+typedef double Type;// 在内层作用域重新声明类型别名Type 表示double
+Type setVal(Type); // 声明函数setVal，参数和返回值的类型都是Type
+Type initVal(); // 在内层作用域重新声明函数initVal，返回类型是Type
+private:
+int val; // 声明私有数据成员val
+};
+// 定义函数setVal，此时的Type 显然是外层作用域的
+Type Exercise::setVal(Type parm) {
+val = parm + initVal(); // 此处使用的是类内的initVal 函数
+return val;
+}
+其中，在Exercise 类的内部，函数setVal 和initVal 用到的Type 都是
+Exercise 内部声明的类型别名，对应的实际类型是double。
+在 Exercise 类的外部，定义Exercise::setVal 函数时形参类型Type 用
+的是Exercise 内部定义的别名，对应double；返回类型Type 用的是全局作用
+域的别名，对应string。使用的initVal 函数是Exercise 类内定义的版本。
+编译上述程序时在setVal 的定义处发生错误，此处定义的函数形参类型是
+double、返回值类型是string，而类内声明的同名函数形参类型是double、返
+回值类型也是double，二者无法匹配。修改的措施是在定义setVal 函数时使用作
+用域运算符强制指定函数的返回值类型。
+Exercise::Type Exercise::setVal(Type parm) {
+val = parm + initVal(); // 此处使用的是类内的initVal 函数
+return val;
+}

@@ -1,0 +1,15 @@
+以练习7.40 构建的Book 类为例，我们令其中的构造函数Book(const string
+&n, const string &I, double pr, const string &a, const string
+&p)为普通构造函数，而令另外两个作为委托构造函数。其具体形式如下所示：
+class Book
+{
+private:
+string Name, ISBN, Author, Publisher;
+double Price = 0;
+public:
+Book(const string &n, const string &I, double pr, const string &a,
+const string &p)
+:Name(n), ISBN(I), Price(pr), Author(a), Publisher(p) { }
+Book() : Book("","", 0, "", "") { }
+Book(std::istream &is) : Book() { is >> *this; }
+};

@@ -1,0 +1,9 @@
+(a)是正确的，编译器首先用给定的string 对象s 自动创建一个Sales_data
+对象，然后这个新生成的临时对象传给combine 的形参（类型是Sales_data），
+函数正确执行并返回结果。
+(b)无法编译通过，因为combine 函数的参数是一个非常量引用，而s 是一个
+string 对象，编译器用s 自动创建一个Sales_data 临时对象，但是这个新生成
+的临时对象无法传递给combine 所需的非常量引用。如果我们把函数声明修改为
+Sales_data &combine(const Sales_data&);就可以了。
+(c)无法编译通过，因为我们把combine 声明成了常量成员函数，所以该函数无
+法修改数据成员的值。

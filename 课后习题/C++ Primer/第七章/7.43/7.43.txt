@@ -1,0 +1,22 @@
+class NoDefult
+{
+
+public:
+	NoDefult(int aa) :a(aa){}
+
+private:
+	int a = 0;
+};
+
+
+class C
+{
+public:
+	C() :no1(0){}// 必须显式调用Nodefault 的带参构造函数初始化no1
+
+
+private:
+	NoDefult no1;
+
+
+};

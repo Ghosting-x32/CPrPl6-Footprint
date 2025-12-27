@@ -1,0 +1,7 @@
+Sales_data first_item(cin);使用了接受std::istream&参数的构造
+函数，该对象的成员值依赖于用户的输入。
+Sales_data next;使用了Sales_data 的默认构造函数，其中string 类
+型的成员bookNo 默认初始化为空字符串，其他几个成员使用类内初始值初始化为0。
+Sales_data last("9-999-99999-9");使用了接受const string&参数
+的构造函数，其中bookNo 使用实参初始化为"9-999-99999-9"，其他几个成员
+使用类内初始值初始化为0。

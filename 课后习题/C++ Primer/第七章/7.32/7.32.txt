@@ -1,0 +1,44 @@
+Window_mgr类的成员函数clear做Screen类的友元函数
+
+1.向前声明Screen类
+2.定义Window_mgr类（此时在Window_mgr类里面使用Screen类对象时，遵循不完全类型使用情景）
+3.定义Screen类
+4.定义clear函数
+
+两个类的各项排列顺序应当如下：
+class Screen;
+
+class Window_mgr
+{
+
+public:
+	void clear(srting::size_type x, Screen& sc);
+
+
+};
+
+//(Screen.h)
+class Screen
+{
+	friend void Window_mgr::clear(srting::size_type x, Screen& sc);
+
+public:
+
+//一系列内容
+
+
+private:
+
+
+//一系列内容
+
+};
+
+
+//不内联的话应当写到Screen类的函数定义文件中（Screen.cpp）
+void Window_mgr::clear(srting::size_type x, Screen& sc)
+{
+	
+	sc.cursor = x;
+
+}
