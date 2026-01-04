@@ -1,0 +1,6 @@
+根据上题解答中对程序的分析：
+若读入了256 个词，则resize 之后容器的capacity 将是384（假定使用
+tdm-gcc 4.8.1）。
+若读入了512 个词，则resize 之后容器的capacity 将是768。
+若读入了1000 个词，则resize 之后容器的capacity 将是2048。
+若读入了1048 个词，则resize 之后容器的capacity 将是2048

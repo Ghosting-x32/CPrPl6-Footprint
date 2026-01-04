@@ -1,0 +1,4 @@
+s.find(args)查找s 中args 第一次出现的位置，即第一个与args 匹配的
+字符串的位置。args 是作为一个字符串整体在s 中查找，而非一个字符集合在s 中
+查找其中字符。因此，对325 页给定的name 和numbers 值，在numbers 中不存
+在与name 匹配的字符串，find 会返回npos。

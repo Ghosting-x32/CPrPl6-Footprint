@@ -1,0 +1,1 @@
+使用迭代器类型vector<int>::iterator 来索引int 的vector 中的元素。
