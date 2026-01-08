@@ -1,0 +1,13 @@
+在书中前文，我们已经学习了一种插入迭代器back_inserter。插入迭代器
+又称插入器，本质上是一种迭代器适配器。如前所述，标准库算法为了保证通用性，
+并不直接操作容器，而是通过迭代器来访问容器元素。因此，算法不具备直接向容
+器插入元素的能力。而插入器正是帮助算法实现向容器插入元素的机制。
+除了 back_inserter，标准库还提供了另外两种插入器：front_inserter
+和inserter。三者的差异在于如何向容器插入元素：back_inserter 调用
+push_back，front_inserter 调用push_front，inserter 则调用insert。
+显然，这也决定了它们插入元素位置的不同。back_inserter 总是插入到容器尾
+元素之后，front_inserter 总是插入到容器首元素之前，而inserter 则是插入
+到给定位置（作为inserter 的第二个参数传递给它）之前。因此，需要注意这些
+特点带来的元素插入效果的差异。例如，使用front_inserter 向容器插入一些元
+素，元素最终在容器中的顺序与插入顺序相反，但back_inserter 和inserter
+则不会有这个问题。
