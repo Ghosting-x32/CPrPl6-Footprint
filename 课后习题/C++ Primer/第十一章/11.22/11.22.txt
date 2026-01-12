@@ -1,0 +1,6 @@
+参数类型是一个pair，first 成员的类型是map 的关键字类型string，
+second 成员的类型是map 的值类型vector<int>：
+pair<string, vector<int>>
+返回类型也是一个pair，first 成员的类型是map 的迭代器，second 成员
+的类型是布尔型：
+pair<map<string, vector<int>>::iterator, bool>

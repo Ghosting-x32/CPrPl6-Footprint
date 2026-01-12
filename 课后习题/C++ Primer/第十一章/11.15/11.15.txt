@@ -1,0 +1,3 @@
+mapped_type 是vector<int>。
+key_type 是int。
+value_type 是pair<const int, vector<int>>。

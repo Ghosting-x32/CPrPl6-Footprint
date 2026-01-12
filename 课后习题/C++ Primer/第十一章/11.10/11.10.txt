@@ -1,0 +1,5 @@
+由于有序容器要求关键字类型必须支持比较操作<，因此
+map<vector<int>::iterator, int> m1;
+是可以的，因为vector 的迭代器支持比较操作。而
+map<list<int>::iterator, int> m2;
+是不行的，因为list 的元素不是连续存储，其迭代器不支持比较操作。

@@ -1,0 +1,7 @@
+转化规则文件下:
+a 
+这种情况在对应的位置会有一个空string，
+待转化：where r u a
+转化后：where are you
+
+相当于忽略了a
